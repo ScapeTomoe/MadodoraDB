@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MagiRepo Exedra Character",
+  "type": "object",
+  "required": ["info", "stats"],
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": "キャラクター固有ID (例: CHA0001)。実IDが不明な場合は null にして provisional_id を使う"
+    },
+    "provisional_id": {
+      "type": "string",
+      "description": "実IDが未確定の場合の仮ID (例: P0001)"
+    },
+    "info": {
+      "type": "object",
+      "required": ["name", "role", "attribute"],
+      "properties": {
+        "kioku_name": { "type": ["string", "null"], "description": "記憶(衣装/フォーム)名" },
+        "name": { "type": "string" },
+        "role": {
+          "type": "string",
+          "enum": ["ATTACKER", "BUFFER", "DEBUFFER", "BREAKER", "HEALER", "DEFENDER"]
+        },
+        "attribute": {
+          "type": "string",
+          "enum": ["FLAME", "WATER", "WOOD", "LIGHT", "DARKNESS", "NONE"]
+        },
+        "rarity": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "maximum": 5,
+          "description": "★の数(1～5)。不明な場合はnull"
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "max_hp": { "type": ["integer", "null"] },
+        "max_atk": { "type": ["integer", "null"] },
+        "max_def": { "type": ["integer", "null"] },
+        "speed": { "type": ["integer", "null"] }
+      }
+    },
+    "normal_attack": { "type": "object" },
+    "battle_skill": { "type": "object" },
+    "magia": { "type": "object" },
+    "ability": { "type": "object" },
+    "support_ability": { "type": "object" }
+  }
+}

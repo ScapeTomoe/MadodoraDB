@@ -1,0 +1,20 @@
+{
+  "id": "CHA0101",
+  "info": {
+    "kioku_name": null,
+    "name": null,
+    "role": null,
+    "attribute": null
+  },
+  "stats": {
+    "max_hp": null,
+    "max_atk": null,
+    "max_def": null,
+    "speed": null
+  },
+  "normal_attack": {},
+  "battle_skill": {},
+  "magia": {},
+  "ability": {},
+  "support_ability": {}
+}

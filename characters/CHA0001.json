@@ -4,7 +4,8 @@
         "kioku_name":"ギガトンハンマー",
         "name":"巴和葉",
         "role":"ATTACKER",
-        "attribute":"FLAME"
+        "attribute":"FLAME",
+        "rarity":5
     },
     "stats":{
         "max_hp":7500,

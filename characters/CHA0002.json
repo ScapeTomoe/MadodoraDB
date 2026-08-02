@@ -1,0 +1,21 @@
+{
+  "id": "CHA0002",
+  "info": {
+    "kioku_name": "ルクスマギカ",
+    "name": "鹿目まどか",
+    "role": "BREAKER",
+    "attribute": "LIGHT",
+    "rarity":5
+  },
+  "stats": {
+    "max_hp": 9667,
+    "max_atk": 3078,
+    "max_def": 3406,
+    "speed": 107
+  },
+  "normal_attack": {},
+  "battle_skill": {},
+  "magia": {},
+  "ability": {},
+  "support_ability": {}
+}

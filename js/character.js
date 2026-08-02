@@ -93,9 +93,17 @@ function renderCharacter(data) {
     </div>
 
     <section class="char-stats">${statsHtml}</section>
+    <p class="char-rarity">${renderRarityStars(info.rarity)}</p>
 
     ${skillsHtml}
   `;
+}
+
+// n個の★の後に(5-n)個の☆を続けた文字列を作る
+// n が null/未定義/範囲外のときは「不明」表示にする
+function renderRarityStars(n) {
+  if (n == null || n < 0 || n > 5) return "レアリティ不明";
+  return "★".repeat(n) + "☆".repeat(5 - n);
 }
 
 function renderVisual(id) {
