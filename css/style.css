@@ -321,6 +321,20 @@ body[data-attribute="NONE"]      { --attr-color: var(--attr-none); }
   animation: hidden-pulse 2.4s ease-in-out infinite;
 }
 
+.char-hidden-link {
+  display: inline-block;
+  margin-top: 0.4em;
+  color: var(--attr-darkness);
+  border-bottom: 1px solid rgba(181, 139, 255, 0.4);
+  font-size: 0.85rem;
+}
+
+.char-hidden-link:hover {
+  color: #d2bfff;
+  border-color: currentColor;
+  text-shadow: 0 0 10px rgba(181, 139, 255, 0.55);
+}
+
 @keyframes hidden-pulse {
   0%, 100% { box-shadow: 0 0 8px -4px var(--attr-darkness); }
   50% { box-shadow: 0 0 20px -2px var(--attr-darkness); }
