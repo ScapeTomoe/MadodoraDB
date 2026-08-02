@@ -263,3 +263,161 @@ li a:hover {
 body > *:last-child {
   margin-bottom: var(--space-4);
 }
+
+/* ============================================================
+   キャラクター詳細ページ (character.html)
+   ============================================================ */
+:root {
+  --attr-flame:     #ff7a63;
+  --attr-water:     #59c3ff;
+  --attr-wood:      #8bdc63;
+  --attr-light:     #f3d477;
+  --attr-darkness:  #b58bff;
+  --attr-none:      #a6adba;
+}
+
+body[data-attribute="FLAME"]     { --attr-color: var(--attr-flame); }
+body[data-attribute="WATER"]     { --attr-color: var(--attr-water); }
+body[data-attribute="WOOD"]      { --attr-color: var(--attr-wood); }
+body[data-attribute="LIGHT"]     { --attr-color: var(--attr-light); }
+body[data-attribute="DARKNESS"]  { --attr-color: var(--attr-darkness); }
+body[data-attribute="NONE"]      { --attr-color: var(--attr-none); }
+
+.char-back {
+  display: block;
+  max-width: var(--content-width);
+  margin: var(--space-3) auto 0;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  font-size: 0.85rem;
+  width: fit-content;
+}
+
+.char-root {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-3);
+}
+
+.char-loading,
+.char-error {
+  text-align: center;
+  color: var(--color-text-mute);
+  padding: var(--space-5) 0;
+}
+
+.char-kioku {
+  text-align: center;
+  color: var(--color-text-mute);
+  font-size: 0.85rem;
+  margin: var(--space-4) 0 0;
+}
+
+.char-name {
+  font-family: var(--font-display);
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  margin: var(--space-1) 0 var(--space-2);
+}
+
+.char-name::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.char-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.char-badge {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  padding: 0.35em 0.9em;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
+  background: var(--color-bg-panel);
+  color: var(--color-text);
+}
+
+.char-badge-attribute {
+  border-color: var(--attr-color, var(--color-accent-2));
+  color: var(--attr-color, var(--color-accent-2));
+}
+
+.char-stats {
+  display: grid;
+  gap: var(--space-2);
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.char-stat {
+  display: grid;
+  grid-template-columns: 3.5em 1fr 3.5em;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+}
+
+.char-stat-label {
+  color: var(--color-text-mute);
+}
+
+.char-stat-bar {
+  height: 0.5em;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.char-stat-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--attr-color, var(--color-accent)), var(--color-accent));
+  border-radius: 999px;
+}
+
+.char-stat-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.char-skill {
+  border-top: 1px solid var(--color-line);
+  padding: var(--space-3) 0;
+}
+
+.char-skill-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 0 0 var(--space-1) !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.char-skill-title::after {
+  margin-left: 0;
+}
+
+.char-skill-name {
+  font-weight: 700;
+  margin: 0 0 var(--space-1);
+}
+
+.char-skill-desc {
+  color: var(--color-text-mute);
+  margin: 0;
+}
+
+.char-skill-pending {
+  color: var(--color-text-mute);
+  opacity: 0.6;
+  font-style: italic;
+  margin: 0;
+}
