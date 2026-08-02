@@ -1,0 +1,22 @@
+{
+    "id":"POR0001",
+    "info":{
+        "name":"夢の中で…",
+        "rarity":5,
+        "boost":{
+            "hp":142,
+            "atk":50,
+            "def":52
+        },
+        "ability":[
+            {
+                "type":"HP",
+                "value":5
+            },
+            {
+                "type":"DEF",
+                "value":7.5
+            }
+        ]
+    }
+}

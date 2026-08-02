@@ -1,0 +1,16 @@
+{
+    "id":"SHOKA0001",
+    "info":{
+        "name":"命脈",
+        "rarity":"B",
+        "equipable":"ALL",
+        "slot":2,
+        "boost":[
+            {
+            "boost_ability":"HP",
+            "boost_type":"NUM",
+            "value":6
+            }
+        ]
+    }
+}
