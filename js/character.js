@@ -69,7 +69,8 @@ function renderCharacter(data) {
   const visualHtml = renderVisual(data.id);
   const hiddenBannerHtml = data.hidden
     ? `<p class="char-hidden-banner">封印を破って辿り着いてしまったようだ……<br>
-        <a href="https://scapetomoe.github.io/-tomoe-sisters/" class="char-hidden-link">巴姉妹 | TOMOE SISTERS</a></p>`
+        <a href="https://scapetomoe.github.io/-tomoe-sisters/" class="char-hidden-link">巴姉妹 | TOMOE SISTERS</a><br>
+        ※本ページのキャラクターは管理者のオリジナルキャラクターであり、まどマギの世界観とは一切関係ありません</p>`
     : "";
 
   const statsHtml = STAT_DEFS.map(({ key, label, scaleMax }) => {
