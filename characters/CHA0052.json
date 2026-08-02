@@ -1,0 +1,40 @@
+{
+    "id":"CHA0052",
+    "info":{
+        "kioku_name":"盟神抉槍",
+        "name":"佐倉杏子",
+        "role":"ATTACKER",
+        "attribute":"FLAME"
+    },
+    "stats":{
+        "max_hp":8803,
+        "max_atk":4046,
+        "max_def":3073,
+        "speed":86
+    },
+    "normal_attack":{
+        "name":"通常攻撃",
+        "description":"敵単体に100%の火属性ダメージ",
+        "effects":[
+            {
+                "type":"damage",
+                "attribute":"FLAME",
+                "ref":"ATK",
+                "power":100,
+                "target":"single"
+            }
+        ]
+    },
+    "battle_skill":{
+
+    },
+    "magia":{
+
+    },
+    "ability":{
+
+    },
+    "support_ability":{
+
+    }
+}
