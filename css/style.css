@@ -306,6 +306,20 @@ body[data-attribute="NONE"]      { --attr-color: var(--attr-none); }
   padding: var(--space-5) 0;
 }
 
+.char-visual {
+  max-width: 22rem;
+  margin: var(--space-3) auto 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  box-shadow: 0 0 40px -12px var(--attr-color, var(--color-accent));
+}
+
+.char-visual img {
+  width: 100%;
+  display: block;
+}
+
 .char-kioku {
   text-align: center;
   color: var(--color-text-mute);

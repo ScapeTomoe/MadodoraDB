@@ -66,6 +66,8 @@ function renderCharacter(data) {
   document.title = `${info.name ?? "???"} | まどドラDB`;
   document.body.dataset.attribute = info.attribute ?? "";
 
+  const visualHtml = renderVisual(data.id);
+
   const statsHtml = STAT_DEFS.map(({ key, label, scaleMax }) => {
     const value = stats[key];
     const pct = value != null ? Math.min(100, Math.round((value / scaleMax) * 100)) : 0;
@@ -82,6 +84,7 @@ function renderCharacter(data) {
   ).join("");
 
   root.innerHTML = `
+    ${visualHtml}
     <p class="char-kioku">${escapeHtml(info.kioku_name ?? "")}</p>
     <h1 class="char-name">${escapeHtml(info.name ?? "???")}</h1>
     <div class="char-badges">
@@ -93,6 +96,19 @@ function renderCharacter(data) {
 
     ${skillsHtml}
   `;
+}
+
+function renderVisual(id) {
+  // id が確定していないキャラ(provisional_idのみ)は画像がまだ無いので表示しない
+  if (!id) return "";
+
+  const imageNumber = id.replace(/^CHA/, "");
+  const src = `images/${imageNumber}.png`;
+
+  return `
+    <div class="char-visual">
+      <img src="${src}" alt="" onerror="this.closest('.char-visual').remove()">
+    </div>`;
 }
 
 function renderSkillSection(label, skill) {
