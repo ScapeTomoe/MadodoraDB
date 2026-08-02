@@ -1,0 +1,40 @@
+{
+    "id":"CHA0001",
+    "info":{
+        "kioku_name":"ギガトンハンマー",
+        "name":"巴和葉",
+        "role":"ATTACKER",
+        "attribute":"FLAME"
+    },
+    "stats":{
+        "max_hp":7500,
+        "max_atk":6000,
+        "max_def":300,
+        "speed":121
+    },
+    "normal_attack":{
+        "name":"通常攻撃",
+        "description":"敵単体に100%の火属性ダメージ",
+        "effects":[
+            {
+                "type":"damage",
+                "attribute":"FLAME",
+                "ref":"ATK",
+                "power":100,
+                "target":"single"
+            }
+        ]
+    },
+    "battle_skill":{
+
+    },
+    "magia":{
+
+    },
+    "ability":{
+
+    },
+    "support_ability":{
+
+    }
+}
