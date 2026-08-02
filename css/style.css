@@ -494,3 +494,65 @@ body[data-attribute="NONE"]      { --attr-color: var(--attr-none); }
   color: var(--attr-flame);
   font-size: 0.85rem;
 }
+
+/* ============================================================
+   コード表示・番号リスト (api.html など)
+   ============================================================ */
+pre {
+  max-width: var(--content-width);
+  margin: var(--space-2) auto;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+pre code {
+  color: var(--color-accent);
+}
+
+p code {
+  background: var(--color-bg-panel);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-line);
+}
+
+h3 {
+  max-width: var(--content-width);
+  margin: var(--space-3) auto var(--space-2);
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  font-family: var(--font-display);
+  color: var(--color-text);
+}
+
+ol {
+  max-width: var(--content-width);
+  margin: var(--space-2) auto;
+  padding-left: calc(var(--space-3) + 1.2em);
+  padding-right: var(--space-3);
+  color: var(--color-text-mute);
+}
+
+ol li {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-family: var(--font-body);
+  letter-spacing: normal;
+  margin-bottom: var(--space-1);
+}
+
+ol li:hover {
+  transform: none;
+  box-shadow: none;
+}

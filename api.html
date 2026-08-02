@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>APIの使い方 | まどドラDB</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <a href="index.html" class="char-back">トップに戻る</a>
+
+        <h1>APIとは？</h1>
+        <p>APIとは、プログラム同士がデータをやり取りするための仕組みです。<br>
+        決められた形式で要求を送ることで、必要な情報を取得したり利用したりできます。<br>
+        本DB内ではIDを入力し、キオクやポートレートのデータを取得することができます。</p>
+
+        <h1>使い方</h1>
+
+        <h2>1. curlコマンドが実行可能な方</h2>
+        <p>以下のコマンドをターミナルで実行してください。</p>
+        <pre><code>curl -o [保存したい名前].json [url]</code></pre>
+        <p>例（巴和葉のキオクデータを取得する場合）：</p>
+        <pre><code>curl -o CHA0001.json https://scapetomoe.github.io/MadodoraDB/characters/CHA0001.json</code></pre>
+
+        <h2>2. curlがパソコンにインストールされていない方</h2>
+        <h3>Windowsの方</h3>
+        <p>Windows 10（2018年頃以降）・Windows 11には標準でcurlが入っているため、通常は上記のコマンドがそのまま使えます。<br>
+        「'curl' は、内部コマンドまたは外部コマンド...として認識されていません」と表示される場合は、代わりにPowerShellの機能を使ってください。</p>
+        <pre><code>Invoke-WebRequest -Uri [url] -OutFile [保存したい名前].json</code></pre>
+
+        <h3>Macの方</h3>
+        <p>macOSには標準でcurlが入っているため、ターミナルでそのままコマンドが使えます。</p>
+
+        <h2>3. コマンドを使いたくない・使えない方</h2>
+        <p>ブラウザだけでも取得できます。</p>
+        <ol>
+            <li>取得したいデータのURL（例: <code>https://scapetomoe.github.io/MadodoraDB/characters/CHA0001.json</code>）にブラウザでアクセスする</li>
+            <li>画面に表示されたJSONデータの上で右クリック</li>
+            <li>「名前を付けて保存」を選択して保存する</li>
+        </ol>
+        <p>保存せずそのまま画面上でデータを確認したいだけの場合は、URLにアクセスするだけで完了です。</p>
+    </body>
+</html>
