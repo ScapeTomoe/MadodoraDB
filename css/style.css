@@ -517,6 +517,45 @@ body[data-attribute="NONE"]      { --attr-color: var(--attr-none); }
   font-size: 0.85rem;
 }
 
+.kioku-list {
+  grid-template-columns: 1fr !important;
+  gap: 0;
+  margin-top: var(--space-2);
+  text-align: left;
+}
+
+.kioku-list li {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-line);
+  border-radius: 0;
+  text-align: left;
+  padding: 0.6em 0.2em;
+  font-family: var(--font-body);
+  letter-spacing: normal;
+}
+
+.kioku-list li:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.kioku-list a {
+  display: block;
+  color: var(--color-text);
+  border-bottom: none;
+}
+
+.kioku-list a:hover {
+  color: var(--color-accent);
+}
+
+.kioku-list-empty {
+  color: var(--color-text-mute);
+  text-align: center;
+  border-bottom: none !important;
+}
+
 /* ============================================================
    コード表示・番号リスト (api.html など)
    ============================================================ */
