@@ -67,6 +67,9 @@ function renderCharacter(data) {
   document.body.dataset.attribute = info.attribute ?? "";
 
   const visualHtml = renderVisual(data.id);
+  const hiddenBannerHtml = data.hidden
+    ? `<p class="char-hidden-banner">封印を破って辿り着いてしまったようだ……</p>`
+    : "";
 
   const statsHtml = STAT_DEFS.map(({ key, label, scaleMax }) => {
     const value = stats[key];
@@ -84,6 +87,7 @@ function renderCharacter(data) {
   ).join("");
 
   root.innerHTML = `
+    ${hiddenBannerHtml}
     ${visualHtml}
     <p class="char-kioku">${escapeHtml(info.kioku_name ?? "")}</p>
     <h1 class="char-name">${escapeHtml(info.name ?? "???")}</h1>
