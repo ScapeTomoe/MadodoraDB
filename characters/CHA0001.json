@@ -27,15 +27,73 @@
         ]
     },
     "battle_skill":{
-
+        "name":"カチ割りハンマー",
+        "description":"敵単体に200%の火属性ダメージ　防御力を10%減少(2ターン)",
+        "effects":[
+            {
+                "type":"damage",
+                "attribute":"FLAME",
+                "ref":"ATK",
+                "power":200,
+                "target":"single"
+            },{
+                "type":"debuff",
+                "target":"one",
+                "attribute":"DEF",
+                "limit":2,
+                "power":10
+            }
+        ]
     },
     "magia":{
-
+        "name":"ギガトンハンマー",
+        "description":"敵単体に攻撃力500%の火属性ダメージ　防御力を完全無視",
+        "effects":[
+            {
+                "type":"damage",
+                "attribute":"FLAME",
+                "ref":"ATK",
+                "power":500,
+                "target":"single",
+                "ignore_def":100
+            }
+        ]
     },
     "ability":{
-
+        "name":"シスターズパワー",
+        "description":"バトル開始時攻撃力+20%　与ダメージ+10%(5ターン)",
+        "effects":[
+            {
+                "type":"buff",
+                "target":"self",
+                "attribute":"ATK",
+                "power":20,
+                "limit":5
+            },{
+                "type":"buff",
+                "target":"self",
+                "attribute":"DAMAGING",
+                "power":10,
+                "limit":5
+            }
+        ]
     },
     "support_ability":{
-
+        "name":"ギガントパワー",
+        "description":"(アタッカーに装備時)攻撃力を+15%　与ダメージ+5%",
+        "target":"ATTACKER",
+        "effects":[
+            {
+                "type":"buff",
+                "target":"self",
+                "attribute":"ATK",
+                "power":15
+            },{
+                "type":"buff",
+                "target":"self",
+                "attribute":"DAMAGING",
+                "power":5
+            }
+        ]
     }
 }

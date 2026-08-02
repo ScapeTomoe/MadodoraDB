@@ -4,7 +4,8 @@
         "kioku_name":"盟神抉槍",
         "name":"佐倉杏子",
         "role":"ATTACKER",
-        "attribute":"FLAME"
+        "attribute":"FLAME",
+        "rarity":5
     },
     "stats":{
         "max_hp":8803,
