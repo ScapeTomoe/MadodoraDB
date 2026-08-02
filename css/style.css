@@ -421,3 +421,76 @@ body[data-attribute="NONE"]      { --attr-color: var(--attr-none); }
   font-style: italic;
   margin: 0;
 }
+
+/* ============================================================
+   キオク検索ページ (kioku.html)
+   ============================================================ */
+.kioku-root {
+  max-width: var(--content-width);
+  margin: var(--space-4) auto 0;
+  padding: 0 var(--space-3);
+  text-align: center;
+}
+
+.kioku-root p {
+  padding: 0;
+}
+
+.kioku-form {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 var(--space-1);
+  flex-wrap: wrap;
+}
+
+.kioku-input {
+  flex: 1 1 16rem;
+  max-width: 20rem;
+  padding: 0.7em 1em;
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.kioku-input::placeholder {
+  color: var(--color-text-mute);
+  opacity: 0.6;
+}
+
+.kioku-input:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-color: var(--color-accent);
+}
+
+.kioku-submit {
+  padding: 0.7em 1.6em;
+  background: transparent;
+  border: 1px solid var(--color-accent-2);
+  border-radius: var(--radius);
+  color: var(--color-accent-2);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.kioku-submit:hover {
+  background: var(--color-accent-2);
+  color: var(--color-bg);
+}
+
+.kioku-submit:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.kioku-error {
+  color: var(--attr-flame);
+  font-size: 0.85rem;
+}

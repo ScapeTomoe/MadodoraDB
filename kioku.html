@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>キオク | まどドラDB</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <a href="index.html" class="char-back">トップに戻る</a>
+
+        <main class="kioku-root">
+            <h1>キオク</h1>
+            <p>キャラクターIDを入力してください（例: CHA0001）</p>
+
+            <form id="kioku-form" class="kioku-form">
+                <input
+                    type="text"
+                    id="kioku-input"
+                    class="kioku-input"
+                    placeholder="CHA0001"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                >
+                <button type="submit" class="kioku-submit">見る</button>
+            </form>
+
+            <p id="kioku-error" class="kioku-error" hidden>IDを入力してください</p>
+        </main>
+
+        <script src="js/kioku.js"></script>
+    </body>
+</html>
